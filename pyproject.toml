@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "fastapi-template"
+version = "0.1.0"
+description = "A template for creating apps with FastAPI"
+authors = ["muzaffar-sirpi <114210961+MuzaffarShaikh0201@users.noreply.github.com>"]
+license = "MIT License"
+readme = "README.md"
+packages = [{include = "src"}]
+
+
+[tool.poetry.dependencies]
+python = "^3.13"
+fastapi = {extras = ["standard"], version = "^0.115.12"}
+coloredlogs = "^15.0.1"
+pydantic-settings = "^2.8.0"
+
+
+[tool.poetry.scripts]
+api = "src.run:start"
+dev = "src.run:dev"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
